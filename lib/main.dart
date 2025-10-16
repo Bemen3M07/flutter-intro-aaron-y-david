@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart'; // 2. Importa el paquete
 
 void main() {
-  runApp(const JavaVsDartApp());
+  runApp(const JavaVsDartApp()); 
 }
 
 class JavaVsDartApp extends StatelessWidget {
@@ -108,7 +108,7 @@ class ComparisonGrid extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final topics = [
+    final topics = [ // Lo hacemos sin declarar List<ComparisonTopic> explícitamente 
       ComparisonTopic(
         title: 'const vs final',
         description: 'Diferencias en inmutabilidad',
@@ -177,13 +177,13 @@ class ComparisonGrid extends StatelessWidget {
 }
 
 class ComparisonTopic {
-  final String title;
-  final String description;
-  final IconData icon;
-  final Color color;
-  final VoidCallback onTap;
+  final String title;  // Utilización de finals
+  final String description; // Utilización de finals
+  final IconData icon; // Utilización de finals
+  final Color color; // Utilización de finals
+  final VoidCallback onTap; // Utilización de finals
 
-  const ComparisonTopic({
+  const ComparisonTopic({ // Utilización de const
     required this.title,
     required this.description,
     required this.icon,

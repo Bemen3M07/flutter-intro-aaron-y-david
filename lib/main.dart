@@ -45,7 +45,7 @@ class HomeScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             WelcomeSection(),
-            SizedBox(height: 400),
+            SizedBox(height: 40),
             ComparisonGrid(),
           ],
         ),
@@ -114,42 +114,42 @@ class ComparisonGrid extends StatelessWidget {
         description: 'Diferencias en inmutabilidad',
         icon: Icons.lock,
         color: const Color(0xFF4CAF50),
-        onTap: () => _showComparison(context, 'const_final'),
+        onTap: () => _showComparison(context, 'const_final'), // Utilización de lambda
       ),
       ComparisonTopic(
         title: 'Constructores',
         description: 'Sintaxis y características',
         icon: Icons.build,
         color: const Color(0xFF2196F3),
-        onTap: () => _showComparison(context, 'constructors'),
+        onTap: () => _showComparison(context, 'constructors'), // Utilización de lambda
       ),
       ComparisonTopic(
         title: 'Parámetros',
         description: 'Named, optional y defaults',
         icon: Icons.settings,
         color: const Color(0xFFFF9800),
-        onTap: () => _showComparison(context, 'parameters'),
+        onTap: () => _showComparison(context, 'parameters'), // Utilización de lambda
       ),
       ComparisonTopic(
         title: 'Funciones',
         description: 'Lambdas y funciones flecha',
         icon: Icons.functions,
         color: const Color(0xFF9C27B0),
-        onTap: () => _showComparison(context, 'functions'),
+        onTap: () => _showComparison(context, 'functions'), // Utilización de lambda
       ),
       ComparisonTopic(
         title: 'Genéricos',
         description: 'Tipos y sintaxis',
         icon: Icons.code,
         color: const Color(0xFFE91E63),
-        onTap: () => _showComparison(context, 'generics'),
+        onTap: () => _showComparison(context, 'generics'), // Utilización de lambda
       ),
       ComparisonTopic(
         title: 'Paquetes',
         description: 'Imports y libraries',
         icon: Icons.folder,
         color: const Color(0xFF795548),
-        onTap: () => _showComparison(context, 'packages'),
+        onTap: () => _showComparison(context, 'packages'), // Utilización de lambda
       ),
     ];
 
@@ -163,14 +163,14 @@ class ComparisonGrid extends StatelessWidget {
         childAspectRatio: 1.1,
       ),
       itemCount: topics.length,
-      itemBuilder: (context, index) => TopicCard(topic: topics[index]),
+      itemBuilder: (context, index) => TopicCard(topic: topics[index]), // Utilización de lambda
     );
   }
 
   void _showComparison(BuildContext context, String type) {
     Navigator.of(context).push(
       MaterialPageRoute(
-        builder: (context) => ComparisonDetailScreen(type: type),
+        builder: (context) => ComparisonDetailScreen(type: type), // Utilización de lambda
       ),
     );
   }
